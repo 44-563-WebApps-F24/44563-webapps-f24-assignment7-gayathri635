@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Divlist</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            background-color: darkblue;
+        }
+
+        .flex-container>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+                background-color: rgb(53, 228, 237);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Gayathri Netapalli builds list with divs</h2>
+
+    <input type="text" id="inputText"><br><br>
+    <button onclick="makeNewDiv()">Add end</button>
+    <button onclick="addFront()">Add front</button>
+    <button onclick="del()">Remove</button>
+    <br><br>
+    <div class="flex-container" id="target">
+        <div class="divlist">row item 1</div>
+        <div class="divlist">row item 2</div>
+        <div class="divlist">row item 3</div>
+    </div>
+
+
+    <script>
+        function makeNewDiv() {
+            let element = document.createElement("div")
+            element.innerHTML = document.getElementById("inputText").value;
+            element.style.color = "Blue"
+            element.className = "divlist"
+
+            let container = document.getElementById('target')
+            container.appendChild(element)
+            let items = document.getElementsByClassName('divlist')
+            let first = 0;
+            console.log("last is " + first)
+            items[first].remove()
+        }
+
+        function del() {
+            let divListItems = document.getElementsByClassName("divlist")
+            let len = divListItems.length
+            let index = Math.floor(len / 2)
+            if (len > 0) {
+                divListItems[index].remove()
+            }
+            else {
+                alert("no items list is empty")
+            }
+        }
+
+        function addFront() {
+            let element = document.createElement("div")
+            element.innerHTML = document.getElementById("inputText").value;
+            element.style.color = "green"
+            element.className = "divlist"
+
+            let container = document.getElementById('target')
+            container.insertBefore(element, container.firstChild)
+            let items = document.getElementsByClassName('divlist')
+            let last = items.length - 1
+            items[last].remove()
+
+        }
+    </script>
+</body>
+
+</html>
