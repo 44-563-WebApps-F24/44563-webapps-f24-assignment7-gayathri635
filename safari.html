@@ -20,190 +20,283 @@
 </head>
 
 <body>
-    <div class="alert alert-info">
-        Click on the locations to find rare animals, watch out for the lion.
-    </div>
-
-    <div id="locations" class="alert alert-secondary">
-        Number of locations checked is zero.
-    </div>
-
-    <div id="score" class="alert alert-success">
-        Score is zero.
-    </div>
-
-    <div class="alert alert-warning">
-        Click for help.
-    </div>
-
-    <div id="help" class="alert alert-danger">
-        Help report
-    </div>
+    <div class="alert alert-info">Click on the locations to find rare animals, watch out for the lion.</div>
+    <div class="alert alert-info" id="locations" class="alert alert-secondary">Number of locations checked is zero.</div>
+    <div class="alert alert-primary" id="score" class="alert alert-success">Score is zero.</div>
+    <div class="alert alert-danger" id="help-result" onclick="help()">Click for help.</div>
+    <div class="alert alert-warning" id="help" class="alert alert-danger">Help report</div>
     <div class="container">
         <div class="game-field">
             <div class="row">
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img0" onclick="check(0)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img1" onclick="check(1)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img2" onclick="check(2)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img3" onclick="check(3)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img4" onclick="check(4)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-            </div>
-            <p> </p>
-            <div class="row">
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img5" onclick="check(5)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
             </div>
             <p> </p>
             <div class="row">
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img6" onclick="check(6)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img7" onclick="check(7)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img8" onclick="check(8)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img9" onclick="check(9)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img10" onclick="check(10)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-            </div>
-            <p> </p>
-            <div class="row">
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img11" onclick="check(11)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
             </div>
             <p> </p>
             <div class="row">
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img12" onclick="check(12)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img13" onclick="check(13)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img14" onclick="check(14)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img15" onclick="check(15)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img16" onclick="check(16)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img17" onclick="check(17)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
             </div>
             <p> </p>
             <div class="row">
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img18" onclick="check(18)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img19" onclick="check(19)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img20" onclick="check(20)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img21" onclick="check(21)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img22" onclick="check(22)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
                 <div class="col-2">
-                    <div class="card"><img src="Tree.jpg" class="card-img-top" alt="Tree" width="150" height="150">
+                    <div class="card"><img id="img23" onclick="check(23)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+            </div>
+            <p> </p>
+            <div class="row">
+                <div class="col-2">
+                    <div class="card"><img id="img24" onclick="check(24)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card"><img id="img25" onclick="check(25)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card"><img id="img26" onclick="check(26)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card"><img id="img27" onclick="check(27)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card"><img id="img28" onclick="check(28)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card"><img id="img29" onclick="check(29)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+            </div>
+            <p> </p>
+            <div class="row">
+                <div class="col-2">
+                    <div class="card"><img id="img30" onclick="check(30)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card"><img id="img31" onclick="check(31)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card"><img id="img32" onclick="check(32)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card"><img id="img33" onclick="check(33)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card"><img id="img34" onclick="check(34)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card"><img id="img35" onclick="check(35)" src="Tree.jpg" class="card-img-top" alt="Tree"
+                            width="150" height="150">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div>
+        <script>
+            var ids = ["img0", "img1", "img2", "img3", "img4", "img5", "img6", "img7", "img8", "img9",
+                "img10", "img11", "img12", "img13", "img14", "img15", "img16", "img17", "img18", "img19",
+                "img20", "img21", "img22", "img23", "img24", "img25", "img26", "img27", "img28", "img29",
+                "img30", "img31", "img32", "img33", "img34", "img35"];
+            var score = 0;
+            var locationsVisited = 0;
+            var lastLocation = 0;
+            var zebraLocations = [1, 8, 12, 22, 34];
+            var lionLocation = 14;
+            var gameOver = false;
+            function initializeGame() {
+                const gameField = document.getElementById('game-field');
+                for (let i = 0; i < 36; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'grid-item';
+                    div.innerHTML = `<img id="img${i}" src="Tree.jpeg" alt="Tree" onclick="check(${i})">`;
+                    gameField.appendChild(div);
+                    ids.push(`img${i}`);
+                }
+            }
+            function check(position) {
+                if (gameOver) return;
+                const imageId = ids[position];
+                const imgElement = document.getElementById(imageId);
+
+                if (position === lionLocation) {
+                    imgElement.src = 'Lion.jpeg';
+                    gameOver = true;
+                    score -= 2;
+                } else if (zebraLocations.includes(position)) {
+                    imgElement.src = 'Zebra.jpeg';
+                    score += 4;
+                } else {
+                    imgElement.src = 'Elephant.jpeg';
+                    score += 1;
+                }
+                locationsVisited += 1;
+                lastLocation = position;
+                document.getElementById('locations').innerText = `Number of locations checked is ${locationsVisited}.`;
+                document.getElementById('score').innerText = `Score is ${score}.`;
+            }
+
+            function help() {
+                let result = '';
+                let closestPositions = [lastLocation - 1, lastLocation + 1, lastLocation - 6, lastLocation + 6];
+                closestPositions = closestPositions.map(pos => (pos + 36) % 36);
+
+                if (closestPositions.some(pos => zebraLocations.includes(pos))) {
+                    result = 'I see stripes';
+                } else {
+
+                    const lionRow = Math.floor(lionLocation / 6);
+                    const lionCol = lionLocation % 6;
+                    const lastRow = Math.floor(lastLocation / 6);
+                    const lastCol = lastLocation % 6;
+
+                    if (Math.abs(lionRow - lastRow) <= 1 && Math.abs(lionCol - lastCol) <= 1) {
+                        result = 'Rawr';
+                    } else {
+                        result = 'It’s grey';
+                    }
+                }
+
+                document.getElementById('help').innerText = `Help report: ${result}`;
+            }
+
+        </script>
+    </div>
+
 </body>
 
 </html>
