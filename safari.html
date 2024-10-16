@@ -236,9 +236,7 @@
         let lionLocation = -1;
         let gameOver = false;
 
-        // Initialize game
         function initializeGame() {
-            // Randomly set lion and zebra locations
             lionLocation = Math.floor(Math.random() * 36);
             do {
                 zebraLocations = Array.from({ length: 5 }, () => Math.floor(Math.random() * 36));
@@ -246,31 +244,28 @@
 
             for (let i = 0; i < 36; i++) {
                 const img = document.getElementById(`img${i}`);
-                img.src = 'Tree.jpg'; // Set initial image to tree
+                img.src = 'Tree.jpg'; 
                 ids.push(`img${i}`);
             }
             document.getElementById('locations').innerText = `Number of locations checked is ${locationsVisited}.`;
             document.getElementById('score').innerText = `Score is ${score}.`;
         }
 
-        // Move lion and check interactions
         function check(position) {
             if (gameOver) return;
 
             if (position === lionLocation) {
                 alert("Game Over! You found the lion.");
                 const imgElement = document.getElementById(`img${lionLocation}`);
-                imgElement.src = 'Lion.jpeg'; // Show lion image
+                imgElement.src = 'Lion.jpeg'; 
                 gameOver = true;
                 return;
             }
 
-            // Move the lion randomly
-            const directions = [-1, 1, -6, 6]; // left, right, up, down
+            const directions = [-1, 1, -6, 6]; 
             const direction = directions[Math.floor(Math.random() * directions.length)];
             const newLionLocation = (lionLocation + direction + 36) % 36;
 
-            // Validate new lion location (no wrap around to the opposite side of the grid)
             if (Math.abs(newLionLocation - lionLocation) === 1 && Math.floor(newLionLocation / 6) === Math.floor(lionLocation / 6)) {
                 lionLocation = newLionLocation;
             }
@@ -283,7 +278,7 @@
             if (zebraLocations.includes(position)) {
                 imgElement.src = 'Zebra.jpeg';
                 score += 4;
-                zebraLocations = zebraLocations.filter(zebraPos => zebraPos !== position); // Remove zebra
+                zebraLocations = zebraLocations.filter(zebraPos => zebraPos !== position); 
             } else {
                 imgElement.src = 'Elephant.jpeg';
                 score += 1;
@@ -293,7 +288,6 @@
             document.getElementById('score').innerText = `Score is ${score}.`;
         }
 
-        // Provide help
         function help() {
             let result = '';
             let closestPositions = [lastLocation - 1, lastLocation + 1, lastLocation - 6, lastLocation + 6];
@@ -315,10 +309,9 @@
             }
 
             document.getElementById('help').innerText = `Help report: ${result}`;
-            document.getElementById('help').style.display = 'block'; // Show help
+            document.getElementById('help').style.display = 'block'; 
         }
 
-        // Start the game
         initializeGame();
     </script>
 

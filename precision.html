@@ -21,7 +21,7 @@
 
     <script>
         let stopTime;
-        let timer; // Variable to hold the timeout ID
+        let timer; 
 
         function recordTime() {
             stopTime = Date.now();
@@ -31,19 +31,16 @@
         document.getElementById("stopBtn").onclick = recordTime;
 
         function startTime() {
-            // Generate a random starting value between 2 and 10
             const startingCount = Math.floor(Math.random() * (10 - 2 + 1)) + 2;
             document.getElementById("counter").innerHTML = "Count: " + startingCount;
             stopTime = undefined;
 
-            // Countdown from the random starting count
             for (let i = startingCount; i >= 0; i--) {
                 timer = setTimeout(() => {
                     if (stopTime === undefined) {
                         document.getElementById("counter").innerHTML = "Count: " + i;
                     }
                     if (i === 0) {
-                        // Final check after countdown finishes
                         if (stopTime === undefined) {
                             document.getElementById("target").innerHTML = "Your time: Too Slow";
                         } else {
