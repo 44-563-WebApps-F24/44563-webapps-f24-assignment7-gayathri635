@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -102,21 +102,30 @@
             const index1 = Math.floor(Math.random() * length);
             let index2;
 
+            // Ensure index2 is different from index1
             do {
                 index2 = Math.floor(Math.random() * length);
             } while (index1 === index2);
 
-            const container = document.getElementById("target");
+            // Get the selected items
             const item1 = divListItems[index1];
             const item2 = divListItems[index2];
 
-            if (index1 < index2) {
-                container.insertBefore(item2, item1);
-                container.insertBefore(item1, divListItems[index2]);
-            } else {
-                container.insertBefore(item1, item2);
-                container.insertBefore(item2, divListItems[index1]);
+            // Handle neighbors case
+            if (index1 > index2) {
+                // Swap index1 and index2 to make index1 always less than index2
+                [index1, index2] = [index2, index1];
             }
+
+            // Remove both items
+            const container = document.getElementById("target");
+            container.removeChild(item1);
+            container.removeChild(item2);
+
+            // Insert item1 before item2's original position
+            container.insertBefore(item1, divListItems[index2]);
+            // Append item2 at the end, which will place it after item1
+            container.insertBefore(item2, divListItems[index2 + 1] || null);
         }
     </script>
 </body>
